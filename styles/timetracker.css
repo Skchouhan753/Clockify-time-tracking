@@ -12,3 +12,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+#appenddiv{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}

@@ -15,18 +15,27 @@ let append = (data) => {
     let container = document.getElementById('container');
     container.innerHTML = null;
     data.forEach(({id,title,stop_time,status}) => {
-        let div = document.createElement('div');
+		let div = document.createElement('div');
+		div.id = 'appenddiv';
         let h3 = document.createElement('h3');
 		h3.innerText = title;
+		h3.id = 'title';
 		
 		let p1 = document.createElement('p');
 		p1.innerText = stop_time;
+		p1.id = 'time';
+
+		let date = document.createElement('input');
+		date.type = "date";
+		date.id = 'date';
 		//console.log(stop_time);
 
         let p = document.createElement('p');
-        p.innerText = status;
+		p.innerText = status;
+		p.id = 'status';
 
-        let delete_btn = document.createElement('button');
+		let delete_btn = document.createElement('button');
+		delete_btn.className = 'btn';
         delete_btn.innerText = 'Delete';
         delete_btn.onclick = () => {
             remove(id);
@@ -34,13 +43,14 @@ let append = (data) => {
 
         //toggle
 
-        let toggle_btn = document.createElement('button');
+		let toggle_btn = document.createElement('button');
+		toggle_btn.className = 'btn';
         toggle_btn.innerText = 'Toggle';
         toggle_btn.onclick = () => {
             toggle(id);
         }
 
-        div.append(h3, p,p1, delete_btn, toggle_btn);
+        div.append(h3, p,p1,date, delete_btn, toggle_btn);
         container.append(div);
     });
 }
