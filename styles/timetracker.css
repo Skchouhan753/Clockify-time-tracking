@@ -4,3 +4,11 @@
     display: grid;
     grid-template-columns:repeat(6,1fr);
 }
+.controls{
+    display:grid ;
+    grid-template-columns: repeat(2,1fr);
+}
+.watch{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
