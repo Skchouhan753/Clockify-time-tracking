@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/timetracker.css">
+    <script src="https://kit.fontawesome.com/8c2f4761e6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="project">
+
+            <input type="text" id="input" placeholder="Project">
+
+            <p id="type"><i class="fa-solid fa-circle-plus"></i> Project</p>
+
+            <i class="fa-solid fa-tag"></i>
+        
+            <i class="fa-solid fa-dollar-sign"></i>
+
+        <div class="watch">
+            <div class="time">
+                00:00:00
+            </div>
+            <div class="controls">
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+            <button id="btn" onclick="submit()">Add</button>
+    </div>
+    
+
+</body>
+</html>
+<script src="./scripts/timetracker.js"></script>
