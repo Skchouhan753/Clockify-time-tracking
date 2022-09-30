@@ -1,0 +1,89 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    text-align: center;
+    font-family: "Segoe UI";
+    background-color: rgb(248, 248, 248);
+}
+h3{
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+nav{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+nav img{
+    margin-left: 50px;
+}
+nav a{
+    margin-right: 50px;
+    color:rgb(11, 123, 123);
+    font-size: 18px;
+    text-decoration: none;
+}
+h1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: "Segoe UI";
+    font-weight: lighter;
+}
+#box{
+    width:350px;
+    height:400px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: auto;
+    margin-top: 30px; 
+    padding: 10px;
+    font-family: "Segoe UI";
+}
+.logindata{
+    width:250px;
+    height:30px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: "Segoe UI";
+}
+#account{
+    width:260px;
+    height:40px;
+    padding: 5px;
+    background-color:rgb(29, 175, 194);
+    border: none;
+    color:white;
+    font-family: "Segoe UI";
+}
+#google{
+    width:260px;
+    height:40px;
+    padding: 5px;
+    background-color: white;
+    font-family: "Segoe UI";
+    border:0.5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+#google img{
+    width:20px;
+    height:20px;
+    margin-right: 50px;
+    margin-left: -30px;
+    
+}
+#langDiv{
+    display: flex;
+    justify-content: center;
+}
+#languages{
+    border:none;
+    background-color: transparent;
+    margin-top: 10px;
+}
+#langDiv img{
+    width:20px;
+    height:20px;
+    margin-top: 10px;
+}
