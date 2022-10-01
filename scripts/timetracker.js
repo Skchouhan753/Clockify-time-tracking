@@ -1,148 +1,266 @@
-let url='https://polar-ocean-25567.herokuapp.com/api/todo';
 
-let stop_time;
-let getData= async()=>{
-    let response = await fetch(`${url}`);
-    let data = await response.json();
-    append(data);
+
+const killNull = JSON.parse(localStorage.getItem("local"))
+if(killNull === null){
+    const temp = [];
+    localStorage.setItem("local",JSON.stringify(temp))
 }
+const projectList = document.getElementById("project__list")
 
-getData();
+projectLister = () => {
+    const array = JSON.parse(localStorage.getItem("local"));
+    let html = ``
+     
+    for( i in array){
+        html += `
+        <option>${array[i].project}</option> 
+        `
+    }
+    projectList.innerHTML = html
+} 
 
+projectLister();
 
-
-let append = (data) => {
-    let container = document.getElementById('container');
-    container.innerHTML = null;
-    data.forEach(({id,title,stop_time,status}) => {
-		let div = document.createElement('div');
-		div.id = 'appenddiv';
-        let h3 = document.createElement('h3');
-		h3.innerText = title;
-		h3.id = 'title';
-		
-		let p1 = document.createElement('p');
-		p1.innerText = stop_time;
-		p1.id = 'time';
-
-		let date = document.createElement('input');
-		date.type = "date";
-		date.id = 'date';
-		//console.log(stop_time);
-
-        let p = document.createElement('p');
-		p.innerText = status;
-		p.id = 'status';
-
-		let delete_btn = document.createElement('button');
-		delete_btn.className = 'btn';
-        delete_btn.innerText = 'Delete';
-        delete_btn.onclick = () => {
-            remove(id);
-        }
-
-        //toggle
-
-		let toggle_btn = document.createElement('button');
-		toggle_btn.className = 'btn';
-        toggle_btn.innerText = 'Toggle';
-        toggle_btn.onclick = () => {
-            toggle(id);
-        }
-
-        div.append(h3, p,p1,date, delete_btn, toggle_btn);
-        container.append(div);
-    });
-}
-
-
-let addTodo = async (stop_time) => {
-    let todo = document.getElementById('todo').value;
-
-    let todo_data = {
-		title: todo,
-		stop_time,
-        status: false,
+const displayTimeTracker = () => {
+    const array = JSON.parse(localStorage.getItem("local"))
+    let html = ""
+    for( let i = 0; i < array.length; i++){
+         let obj = array[i];
+         for(key in obj){
+             if(obj[key].time != undefined && obj[key].time != 0 ){
+                let tempo = key
+                html += `  
         
-    };
+                <div class="Timetracker__body__info">
+                    <div>
+                        <span>Day : <b>${key}</b> </span>
+                    </div>
+                    <div>
+                        <input  placeholder="Add Description" title=${tempo} id=${obj.id}  onchange="inputChangeTracker(this)" value="${obj[key].desc}" >
+                    </div>
+                    <div>
+                        <span>Project Name : <b>${obj.project}</b></span>
+                    </div>
+                    <div>
+                        <span>Total Time : <input type="number" title=${tempo} id=${obj.id}  onchange="inputTimeChangeTracker(this)" value="${obj[key].time}" > <b>Minutes</b></span>
+                    </div>
+                    <div>
+                        <i title=${tempo} id=${obj.id} onClick="deleteTimeTracker(this)" class="far fa-trash-alt"></i>
+                    </div>
+                </div>`
+             }
+         }
+    }
+    document.getElementById("Timetracker__body").innerHTML = html
+}
 
-    let res = await fetch(`${url}`, {
-        method: 'POST',
-        body: JSON.stringify(todo_data),
-        headers: {
-            'Content-Type': 'application/json',
+ // <div>
+// <i title=${tempo} id=${obj.id}  onClick="miniStopWatch(this)" class="fas fa-play"></i>
+// </div>
+
+displayTimeTracker();
+
+const inputTimeChangeTracker = (e)=>{
+   const newValue = e.value;
+   let array = JSON.parse(localStorage.getItem("local"))
+   let id = e.id;
+   let day = e.title;
+   for(let i = 0; i < array.length; i++){
+       if(array[i].id == id){
+           if(newValue != ""){
+            array[i][day].time = newValue;  
+           }
+          
+       }
+   }
+
+   localStorage.setItem("local",JSON.stringify(array))
+   displayTimeTracker();
+}
+
+
+const inputChangeTracker = (e) =>{
+   const newValue = e.value;
+   let array = JSON.parse(localStorage.getItem("local"))
+   let id = e.id;
+   let day = e.title;
+   for(let i = 0; i < array.length; i++){
+       if(array[i].id == id){
+           array[i][day].desc = newValue;  
+       }
+   }
+
+   localStorage.setItem("local",JSON.stringify(array))
+   displayTimeTracker();
+
+}
+
+ 
+
+
+deleteTimeTracker = (e) =>{
+    let array = JSON.parse(localStorage.getItem("local"))
+    let id = e.id;
+    let day = e.title;
+    for(let i = 0; i < array.length; i++){
+        if(array[i].id == id){
+            array[i][day].time = 0;
+            array[i][day].desc = "";
+
+            
+          if(array[i].monday.time == 0 && array[i].tuesday.time  == 0 && array[i].wednesday.time == 0 && array[i].thursday.time == 0 && array[i].friday.time == 0 && array[i].saturday.time == 0 && array[i].sunday.time == 0){
+            array.splice(i,1);
+          }  
         }
-    });
-    getData();
-};
+    }
 
-let remove = async (id) => {
-    let res = await fetch(`${url}/${id}`, {
-        method:'DELETE',
-    });
-    getData();
-}
-
-let toggle = async (id) => {
-
-    let todo = await fetch(`${url}/${id}`);
-    todo = await todo.json();
-
-    let todo_status = { status: !todo.status };
-    let res = await fetch(`${url}/${id}`, {
-        method: 'PATCH',
-        body: JSON.stringify(todo_status),
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    });
-    getData();
-};
-
-
-// stopwatch
-
-// Global variables
-const time_el = document.querySelector('.watch .time');
-const start_btn = document.getElementById('start');
-const stop_btn = document.getElementById("stop");
-
-let seconds = 0;
-let interval = null;
-
-// Event listeners
-start_btn.addEventListener('click', start);
-stop_btn.addEventListener("click", stop);
-
-// Update the timer
-function timer () {
-	seconds++;
-
-	// Format our time
-	let hrs = Math.floor(seconds / 3600);
-	let mins = Math.floor((seconds - (hrs * 3600)) / 60);
-	let secs = seconds % 60;
-
-	if (secs < 10) secs = '0' + secs;
-	if (mins < 10) mins = "0" + mins;
-	if (hrs < 10) hrs = "0" + hrs;
-
-	time_el.innerText = `${hrs}:${mins}:${secs}`;
+    localStorage.setItem("local",JSON.stringify(array))
+    displayTimeTracker();
 }
 
 
-function start () {
-	if (interval) {
-		return
-	}
+// ---------------------------Time Tracker Add Items----------------------------------
 
-	interval = setInterval(timer, 1000);
+//constructor for storing values
+function Storagemanager(id,project,monday,tuesday,wednesday,thursday,friday,saturday,sunday) {
+    this.id = id;
+    this.project = project;
+
+    this.monday = {
+        time : monday,
+        desc : "",
+    }
+    this.tuesday = {
+        time : tuesday,
+        desc : "",
+    }
+    this.wednesday = {
+        time : wednesday,
+        desc : "",
+    }
+    this.thursday = {
+        time : thursday,
+        desc : "",
+    }
+    this.friday = {
+        time : friday,
+        desc : "",
+    }
+    this.saturday = {
+        time : saturday,
+        desc : "",
+    }
+    this.sunday = {
+        time : sunday,
+        desc : "",
+    }   
+}
+ 
+let btn = document.getElementById("time__start")
+let counter = document.getElementById("time__tracker")
+let flag = 0;
+ 
+let count = 0;
+btn.addEventListener("click",start)
+function start(){
+       if( flag === 0){
+        let start = setInterval(function(){
+        count = count + 1;
+        counter.innerHTML = count;   
+        btn.innerHTML = "Stop";
+        btn.style.background = "red"
+        btn.style.color = "white"
+        btn.style.border.color = "red"
+        flag = 1;
+        
+        btn.addEventListener("click",function(){
+            clearInterval(start)
+                btn.innerHTML = "Start";
+                flag = 0;
+                btn.style.background = "#5FBDF7"
+                btn.style.color = "white";
+                btn.style.border.color = "#5FBDF7"
+            })
+       },1000) 
+   }
+   
 }
 
-function stop () {
-	clearInterval(interval);
-	interval = null;
-	stop_time = time_el.innerText;
-	addTodo(stop_time);
-	//console.log(stop_time);
+addItemsTimeTracker = () => {
+  if(flag === 1){
+        let timeTrackerDesc = document.getElementById("Timetracker__description").value;
+        let timeTrackerProject = document.getElementById("projectListInput").value;
+        let timeTrackerWeekDay = document.getElementById("weekDaysInput").value;
+        timeTrackerProject = timeTrackerProject.toLowerCase() 
+        if(timeTrackerProject === "" || timeTrackerWeekDay === ""){
+            alert("Please fill in the require fields")
+            count = 0;
+            counter.innerHTML = count;
+        }
+        else{
+            
+        let array = JSON.parse(localStorage.getItem("local"))
+        if(array === null || array.length === 0){
+             array = [];
+             const id =  Math.ceil(Math.random()*10000);
+             const proj = timeTrackerProject;
+             const store = new Storagemanager(id,proj,0,0,0,0,0,0,0);
+             let temp = timeTrackerWeekDay.toLowerCase();
+             for(key in store){
+                 if(key === temp){
+                     store[key].desc = timeTrackerDesc;
+                     store[key].time = count;
+                 }
+             }
+             array.push(store)
+             localStorage.setItem("local",JSON.stringify(array))
+             displayTimeTracker();
+             location.reload();
+        }
+        else{
+                array = JSON.parse(localStorage.getItem("local"))
+                for( i in array){
+                    if(array[i].project === timeTrackerProject){
+                        let temp = timeTrackerWeekDay.toLowerCase();
+                        for( key in array[i]){
+                                if(key === temp){
+                                array[i][key].desc = timeTrackerDesc;
+                                array[i][key].time =  Number(array[i][key].time) + count;
+                            }
+                        }    
+                    localStorage.setItem("local",JSON.stringify(array))
+                    location.reload();
+                    }
+                    else{
+                        array = JSON.parse(localStorage.getItem("local"))
+                        const id =  Math.ceil(Math.random()*10000);
+                        const proj = timeTrackerProject;
+                        const store = new Storagemanager(id,proj,0,0,0,0,0,0,0);
+                        let temp = timeTrackerWeekDay.toLowerCase();
+                        for(key in store){
+                            if(key === temp){
+                                store[key].desc = timeTrackerDesc;
+                                store[key].time = count;
+                            }
+                        }
+                        array.push(store)
+                        localStorage.setItem("local",JSON.stringify(array))
+                        document.getElementById("Timetracker__description").value = "";
+                        document.getElementById("projectListInput").value = "";
+                        document.getElementById("weekDaysInput").value = "";
+                        count = 0;
+                        displayTimeTracker();
+                        location.reload();
+                    }
+                }
+
+            }
+        }
+
+       
+    }
 }
+
+btn.addEventListener("click",addItemsTimeTracker)
+
+
