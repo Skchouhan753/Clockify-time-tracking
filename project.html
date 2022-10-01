@@ -15,7 +15,7 @@
   <div id="projectbox">
     <div id="newproject1">
       <h1 style=" color: gray;">Projects</h1>
-      <button id="createbtn">Create New Projects</button>
+      <button onclick="new_project()" id="createbtn">Create New Projects</button>
     </div>
 
     <div id="project-bar">
@@ -119,7 +119,7 @@
   </div>
 
 
-
+  <div id="project_details">
   <div id="project2">Projects</div>
   <div style="display: flex; justify-content: space-evenly;" id="pvalue">
     <input type="checkbox">
@@ -130,6 +130,10 @@
      <P>PROGRESS <i class="fa-solid fa-chevron-down"></i></P>
      <P>ACCESS  <i class="fa-solid fa-chevron-down"></i></P>
   </div>
+  <div id="project_saved" ></div>
+  </div>
+
+
   
 
 
@@ -144,21 +148,38 @@
     <br><br>
     <input style ="padding: 5px; width: 80%;" type="number" placeholder="Add client" id="projectclient">
     <div style="display:flex ; margin-left: 50px; margin-top: 10px;">
-    <input  type="color">
-    <input type="checkbox">
-    <h>Public</h>
-    <br><br>
+    <input  type="color" id="projectcolor">
+    <select style="margin:auto" id="projecttype">
+      <option value="public">public</option>
+      <option value="private">private</option>
+    </select>
   </div>
-  <input style ="padding: 5px;width: 80%;" type="text" placeholder="No template">
+  <br>
+  <input style ="padding: 5px;width: 80%;" type="text"  id="projecttemplate" placeholder="No template">
   <hr>
   <div style="display:flex">
-     <p id="cancelbtn" onclick="">cancel</p>
-     <button id="craetebtn" onclick="">create</button>
+     <button id="cancelbtn" onclick="cencel_pro()">Cancel</button>
+     <button id="craetebtn"onclick="create_pro()">Create</button>
   </div>
 </div>
 
   </div>
 
+
+
+
+  <div id="alert_save">
+    <div>
+        <p>Project Delete</p>
+    </div>
+    <div>
+        <p>Are you sure you want to delete project?This can not be undo</p>
+    </div>
+    <div>
+    <button onclick="cencel_pro()">Cencel</button>
+    <button onclick="delete_project()">Delete</button>
+    </div>
+</div>
 
 
 
