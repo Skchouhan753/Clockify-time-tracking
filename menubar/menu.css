@@ -1,0 +1,157 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Segoe UI";
+}
+#navbar{
+    border:1px solid rgb(185, 183, 183);
+    width:100%;
+    border-left: none;    /* */
+    border-right: none;
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+      
+}
+#navbar div:last-child{
+    display: flex; 
+    gap:20px; 
+}
+#navbtn{
+    border:none;
+    background-color: transparent;
+} 
+
+.drpImg{
+    width: 20px;
+    height: 20px;
+}
+.sidebar {
+    border-left: 5px solid aqua;
+    height: 650px;
+    
+}
+/* ---------------------------------- */
+
+/* ------------------------------- */
+.button {
+    border: 0.5px solid rgb(185, 183, 183);
+    width: 50px;
+    height: 40px;
+    border-top: none;
+    border-right: none;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 3px; */
+    
+    /* display: block; */
+
+    background: linear-gradient(to right, rgb(212, 210, 210) 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+.button:hover {
+    background-position: left bottom;
+}
+
+.button img {
+    width: 20px;
+    height: 20px;
+}
+#navimg{
+    width:30px;  
+}
+#logo{
+    width:110px; 
+}
+.navImg1{
+    width: 30px;
+    height:30px;
+    /* border-left: 1px solid black;
+    border-right: 1px solid black; */
+}
+.navImg2{
+    width: 30px;
+    height:30px;
+    /* border-right: 1px solid black; */
+}
+#upgrade{
+    width:80px;
+    height:30px;
+    padding: 2px;
+    color:rgb(11, 198, 198);
+    /* border-color:rgb(11, 198, 198); */
+    border: 1px solid rgb(11, 198, 198);
+}
+#upgrade:hover{
+    background-color: rgb(11, 198, 198);
+    color: white;
+}
+#showuserbtn{
+    border-radius: 100%;
+    width: 30px;
+    height:30px;
+    border:1px solid rgb(11, 198, 198);
+    background-color:rgb(11, 198, 198);
+    color:white;
+}
+ 
+#menuflex{
+    display: flex;  
+}
+#newMenu ul{
+    list-style-type: none;
+}
+#newMenu ul li{
+    border:0.5px solid rgb(185, 183, 183);
+    width: 120px;
+    height: 40px;
+    border-top: none;
+    border-left: none;
+    /* text-align: center; */
+    display: grid;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    /* border-radius: 3px; */
+    
+    /* display: block; */
+
+    background: linear-gradient(to right, rgb(194, 188, 188) 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+#newMenu ul li:hover {
+    background-position: left bottom;
+}
+
+#newMenu ul a{
+    text-decoration: none;
+}
+/* --------------------------- */
+.sideBarIconToggle{
+    width: 20px;
+    height: 20px;
+    /* background: blueviolet; */
+    position: absolute;
+    z-index: 10;
+    top:20px;
+    left:10px;
+    cursor: pointer;
+}
+
+/* #newMenu{
+    transform: translateX(-20px);
+    display: none;
+}
+#openSideBarMenu:checked ~ #newMenu{
+    display:block;   
+    transform: translateX(0px);
+} */
