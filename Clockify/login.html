@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./CSS/login.css" />
+  </head>
+  <body>
+    <div id="mainDiv1">
+      <nav>
+        <img
+          onclick="parent.location='index.html'"
+          src="https://app.clockify.me/assets/logo.svg"
+          alt=""
+        /><span class="dont_account"
+          >Don't have an account?<a href="./signup.html">Sign Up</a></span
+        >
+      </nav>
+      <div id="box">
+        <h3 id="sign">Log In</h3>
+        <br />
+        <input
+          type="email"
+          id="email"
+          class="logindata"
+          placeholder="Enter email"
+        /><br /><br />
+        <input
+          type="password"
+          id="password"
+          class="logindata"
+          placeholder="Choose password"
+        /><br /><br />
+        <input type="checkbox" id="chkbox" value="true" /> Stay Logged in
+        <a href="">Forget password?</a><br /><br />
+        <button onclick="login()" id="account">LOG IN</button><br /><br />
+        OR <br /><br />
+        <button id="google">
+          <span>Continue with Google</span>
+          <img
+            src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png"
+            alt=""
+          />
+        </button>
+      </div>
+      <div id="langDiv">
+        <img
+          src="https://www.freepnglogos.com/uploads/logo-website-png/logo-website-file-globe-icon-svg-wikimedia-commons-21.png"
+          alt=""
+        />
+        <select name="" id="languages">
+          <option value="english">English</option>
+          <option value="hindi">Hindi</option>
+          <option value="chinese">Chinese</option>
+          <option value="bengali">Bengali</option>
+          <option value="marathi">Marathi</option>
+          <option value="tamil">Tamil</option>
+        </select>
+      </div>
+      <!-- <img src="" alt="">
+    <p>Your data is safe with us: Security Privacy</p> -->
+    </div>
+    <div id="mainDiv2">
+      <div>
+        <button>NEW</button>
+        <h1 class="h">Scheduling</h1>
+        <h3 class="h">
+          Visualize projects on a timeline and plan team's capacity (see who's
+          busy and who's available).
+        </h3>
+        <button id="hwbtn">SEE HOW IT WORKS</button>
+      </div>
+      <div>
+        <img
+          src="https://app.clockify.me/assets/features-info/scheduling-promo.webp"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./JS/login.js"></script>

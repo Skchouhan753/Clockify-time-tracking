@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clockify - 100% Free Time Tracking Software</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/249783f98b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/homepage.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <div id="home_nav"></div>
+    <script>
+        $(function () {
+            $("#home_nav").load("navbar.html");
+        });
+    </script>
+    <!-- --------------------- Navigation End ----------------------------->
+    <div id="Header" class="Header">
+        <div>
+            <h1>The most popular free <span class="skyblue_text">time tracker</span> for teams</h1>
+            <div class="Header__desc">
+                <p>Time tracking software used by millions. Clockify is a time tracker and timesheet app that lets you
+                    track work hours across projects. Unlimited users, free forever.</p>
+            </div>
+            <div class="hero__stars">
+                <a href="#Header">
+                    <img loading="lazy" src="https://clockify.me/assets/images/stars-small.svg"
+                        alt="4.7 average rating">
+                    <div>4,000+ Reviews</div>
+                </a>
+            </div>
+            <button onclick="parent.location='signup.html'" class="Dark__btn">START TRACKING TIME — IT'S FREE!</button>
+            <i class="fas fa-users"><span>147,268 people signed up last month</i>
+        </div>
+        <div class="Header__hero">
+            <div class="Header__hero__image">
+                <img class="Header__showcase" src="https://clockify.me/assets/images/customers-light-gray-3.svg"
+                    alt="icon-showcase">
+
+
+
+                <!-- <div id="image-and-button" class="hero__image_and_button">
+                    <img id="hero-image" class="hero__img"
+                        src="https://clockify.me/assets/images/time-tracker-screenshot.svg"
+                        alt="Free time tracking software and time tracker app screenshot">
+                    <div id="play-button" class="hero__button_and_text">
+                        <img id="video-play-button" src="https://clockify.me/assets/images/play-button.svg"
+                            alt="Icon for play video" class="hero__button_and_text__button">
+                        <p id="watch-video" class="hero__button_and_text__text">Watch demo (12:35)</p>
+                    </div>
+                </div>
+                <div id="demo-video" class="hero__demo_video">
+                    <div id="iframe-container"></div>
+                    <img id="close-button" src="https://clockify.me/assets/images/close-button.svg"
+                        alt="Icon for closing video" class="hero__demo_video__close_button">
+                </div> -->
+
+
+                <div id="light">
+                    <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+                    <iframe id="VisaChipCardVideo" style="border: 0; width: 80vw; height: 80vh;" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                </div>
+
+                <div id="fade" onClick="lightbox_close();"></div>
+
+                <div>
+                    <a href="#boxclose" onclick="lightbox_open();">
+                        <div id="image-and-button" class="hero__image_and_button">
+                            <img id="hero-image" class="hero__img"
+                                src="https://clockify.me/assets/images/time-tracker-screenshot.svg"
+                                alt="Free time tracking software and time tracker app screenshot">
+                            <div id="play-button" class="hero__button_and_text">
+                                <img id="video-play-button" src="https://clockify.me/assets/images/play-button.svg"
+                                    alt="Icon for play video" class="hero__button_and_text__button">
+                                <p id="watch-video" class="hero__button_and_text__text">Watch demo (12:35)</p>
+                            </div>
+                        </div>
+                        <div id="demo-video" class="hero__demo_video">
+                            <div id="iframe-container"></div>
+                            <img id="close-button" src="https://clockify.me/assets/images/close-button.svg"
+                                alt="Icon for closing video" class="hero__demo_video__close_button">
+                        </div>
+
+                        <script>
+                            window.document.onkeydown = function (e) {
+                                if (!e) {
+                                    e = event;
+                                }
+                                if (e.keyCode == 27) {
+                                    lightbox_close();
+                                }
+                            }
+
+                            function lightbox_open() {
+                                let lightBoxVideo = document.getElementById("VisaChipCardVideo");
+                                window.scrollTo(0, 0);
+                                document.getElementById('light').style.display = 'block';
+                                document.getElementById('fade').style.display = 'block';
+                                lightBoxVideo.play();
+                            }
+
+                            function lightbox_close() {
+                                let lightBoxVideo = document.getElementById("VisaChipCardVideo");
+                                document.getElementById('light').style.display = 'none';
+                                document.getElementById('fade').style.display = 'none';
+                                lightBoxVideo.pause();
+                            }
+                        </script>
+
+                    </a>
+                </div>
+
+
+
+
+
+
+
+            </div>
+            <!-- <label class="Header__hero__toggle">
+                <input id="checker" type="checkbox"> <span class="slider round"></span>
+            </label> -->
+        </div>
+    </div>
+    <!-- --------------------- Header End ----------------------------->
+
+    <div class="Features">
+        <div>
+            <h1 class="Heading__Two">Time management features</h1>
+            <div class="Features__desc">
+                <p class="features__text">Track productivity, attendance, and billable hours with a simple time tracker
+                    and timesheet.</p>
+            </div>
+        </div>
+        <div class="Features__showcase">
+            <div class="Features__showcase__section">
+                <div class="Features__showcase__section__content">
+                    <p>Timekeeping</p>
+                    <ul class="homepage-list">
+                        <li><a href="/timer-app">
+                                <span class="homepage-list-title">Timer <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">Track work
+                                        hours in real time.</span></span>
+                            </a></li>
+                        <a href="/timesheet-app">
+                            <li>
+                                <span class="homepage-list-title">Timesheet <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">Enter time in
+                                        a weekly timesheet.</span>
+                            </li>
+                        </a>
+                        <a href="/time-blocking-app">
+                            <li>
+                                <span class="homepage-list-title">Calendar <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">Visually block
+                                        out and manage time.</span>
+                            </li>
+                        </a>
+                        <a href="/automatic-time-tracker">
+                            <li>
+                                <span class="homepage-list-title">Auto tracker <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">Track apps and
+                                        websites you use.</span>
+                            </li>
+                        </a>
+                        <a href="/free-time-clock-kiosk-app">
+                            <li>
+                                <span class="homepage-list-title">Kiosk <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">Clock in from
+                                        a shared device.</span>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="Features__showcase__one__image">
+                    <img src="https://clockify.me/assets/images/feature-time-tracker-methods.svg" alt="feature image">
+                </div>
+            </div>
+            <div class="Features__showcase__section">
+                <div class="Features__showcase__section__content">
+                    <p>Reporting
+                    <p>
+                    <ul class="homepage-list">
+                        <a href="/time-reporting">
+                            <li>
+                                <span class="homepage-list-title">Reports <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">Analyze and
+                                        export tracked time.</span>
+                            </li>
+                        </a>
+                        <a href="/team-time-management">
+                            <li>
+                                <span class="homepage-list-title">Activity <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">See who works
+                                        on what.</span>
+                            </li>
+                        </a>
+                        <a href="/billable-hours-calculator">
+                            <li>
+                                <span class="homepage-list-title">Rates <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">See earnings,
+                                        cost, and profit.</span>
+                            </li>
+                        </a>
+                        <a href="/project-time-tracker">
+                            <li>
+                                <span class="homepage-list-title">Progress <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">Track project
+                                        estimates and budget.</span>
+                            </li>
+                        </a>
+                        <a href="/gps-time-clock">
+                            <li>
+                                <span class="homepage-list-title">Location <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">See visited
+                                        sites and routes.</span>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="Features__showcase__one__image">
+                    <img src="https://clockify.me/assets/images/feature-time-reporting-activity.svg"
+                        alt="feature image">
+                </div>
+            </div>
+            <div class="Features__showcase__section">
+                <div class="Features__showcase__section__content">
+                    <p>Team Activity</p>
+                    <ul class="homepage-list">
+                        <a href="/employee-scheduling-software">
+                            <li>
+                                <span class="homepage-list-title">Scheduling <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">Schedule work,
+                                        assignments, and shifts.</span>
+                            </li>
+                        </a>
+                        <a href="/leave-pto-vacation-tracker">
+                            <li>
+                                <span class="homepage-list-title">Time off <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">Manage leaves
+                                        and holidays.</span>
+                            </li>
+                        </a>
+                        <a href="/office-team-timesheet">
+                            <li>
+                                <span class="homepage-list-title">Approval <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">Submit and
+                                        approve timesheets.</span>
+                            </li>
+                        </a>
+                        <a href="/time-tracking-invoicing">
+                            <li>
+                                <span class="homepage-list-title">Invoicing <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">Create
+                                        invoices from billable time.</span>
+                            </li>
+                        </a>
+                        <a href="/time-expense-tracking">
+                            <li>
+                                <span class="homepage-list-title">Expenses <img
+                                        src="https://clockify.me/assets/images/arrow-right-blue-circle-small.svg" alt=""
+                                        class="homepage-list-arrow"><span class="homepage-list-explainer">Record project
+                                        expenses and fees.</span>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="Features__showcase__one__image">
+                    <img src="https://clockify.me/assets/images/feature-team-scheduling.svg" alt="feature image">
+                </div>
+            </div>
+            <button onclick="parent.location='signup.html'" class="Dark__btn">SEE ALL FEATURES</button>
+        </div>
+    </div>
+    <!-- --------------------- Features End ----------------------------->
+
+    <section class="uniqueness">
+        <div class="uniqueness__content">
+            <h2 class="everywhere__header">Time tracking apps</h2>
+            <p class="everywhere__text_about">Clockify works across devices. Track time from anywhere &mdash; all data
+                is synced online.</p>
+            <div class="everywhere__grid">
+                <div class="everywhere__grid__item">
+                    <span class="everywhere__grid__item--image">
+                        <img loading=lazy src="https://clockify.me/assets/images/time-tracking-app-desktop.png"
+                            srcset="https://clockify.me/assets/images/time-tracking-app-desktop@2x.png 2x"
+                            alt="Desktop time tracking app and time tracker for Mac and Windows">
+                    </span>
+                    <span class="everywhere__grid__item--buttons">
+                        <h3>Desktop app</h3>
+                        <a href="#">
+                            <button class="everywhere__app-link">Windows</button>
+                        </a>
+                        <a href="#">
+                            <button class="everywhere__app-link">Mac</button>
+                        </a>
+                        <a href="#">
+                            <button class="everywhere__app-link">Linux</button>
+                        </a>
+                    </span>
+                </div>
+                <div class="everywhere__grid__item">
+                    <span class="everywhere__grid__item--image">
+                        <img loading=lazy src="https://clockify.me/assets/images/time-tracking-app-web.png"
+                            srcset="https://clockify.me/assets/images/time-tracking-app-web@2x.png 2x"
+                            alt="Online time tracking app and time tracker">
+                    </span>
+                    <span class="everywhere__grid__item--buttons">
+                        <h3>Web app</h3>
+                        <a href="#">
+                            <button class="everywhere__app-link">Edge</button>
+                        </a>
+                        <a href="#">
+                            <button class="everywhere__app-link">Chrome</button>
+                        </a>
+                        <a href="#">
+                            <button class="everywhere__app-link">Firefox</button>
+                        </a>
+                    </span>
+                </div>
+                <div class="everywhere__grid__item">
+                    <span class="everywhere__grid__item--image">
+                        <img loading=lazy src="https://clockify.me/assets/images/time-tracking-app-mobile.png"
+                            srcset="https://clockify.me/assets/images/time-tracking-app-mobile@2x.png 2x"
+                            alt="Mobile time tracking app and time tracker for Android and iPhone iPad">
+                    </span>
+                    <span class="everywhere__grid__item--buttons">
+                        <h3>Mobile app</h3>
+                        <a href="#">
+                            <button class="everywhere__app-link">Android</button>
+                        </a>
+                        <a href="#">
+                            <button class="everywhere__app-link">iOS</button>
+                        </a>
+                    </span>
+                </div>
+                <div class="everywhere__grid__item">
+                    <span class="everywhere__grid__item--image">
+                        <img loading=lazy src="https://clockify.me/assets/images/time-tracking-app-kiosk.png"
+                            srcset="https://clockify.me/assets/images/time-tracking-app-kiosk@2x.png 2x"
+                            alt="Kiosk time tracking app and time tracker for tablet, computer, and phone">
+                    </span>
+                    <span class="everywhere__grid__item--buttons">
+                        <h3>Kiosk app</h3>
+                        <a href="#">
+                            <button class="everywhere__app-link" style="width: 140px;">Any device</button>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- --------------------- Uniqueness End ----------------------------->
+
+
+
+
+
+
+
+    <section class="advantages">
+        <div class="advantages__content">
+            <h2 class="advantages__header">Why track time with Clockify</h2>
+            <div class="advantages__row">
+                <a class="advantages__row__box" href="/why-use-time-tracker#productivity">
+                    <div class="advantages__row__box__content">
+                        <span style="margin-top: -20px;"  id="img-productivity"></span>
+                        <h3 style="margin-top: -30px;"  class="advantages__row__box__header">Boost productivity</h3>
+                        <p class="advantages__row__box__text_about">Track time you spend on activities, see where your
+                            time goes, and improve your time management skills.</p>
+                        <p class="advantages__row__box__text_learn">Learn more &rarr;</p>
+                    </div>
+                </a>
+                <a class="advantages__row__box" href="/why-use-time-tracker#billing">
+                    <div class="advantages__row__box__content">
+                        <span style="margin-top: -20px;" id="img-profitability"></span>
+                        <h3 style="margin-top: -30px;"  class="advantages__row__box__header">Bill clients</h3>
+                        <p class="advantages__row__box__text_about">Track billable time and expenses, show clients how
+                            much you've worked, see how much you've earned, and create invoices.</p>
+                        <p  class="advantages__row__box__text_learn">Learn more &rarr;</p>
+                    </div>
+                </a>
+            </div>
+            <div class="advantages__row">
+                <a class="advantages__row__box" href="/why-use-time-tracker#team-management">
+                    <div class="advantages__row__box__content">
+                        <span id="img-team_management"></span>
+                        <h3 class="advantages__row__box__header">Manage team</h3>
+                        <p class="advantages__row__box__text_about">Track attendance for payroll and accounting, see who
+                            works on what, and manage workload among teams.</p>
+                        <p class="advantages__row__box__text_learn">Learn more &rarr;</p>
+                    </div>
+                </a>
+                <a class="advantages__row__box" href="/why-use-time-tracker#business-intelligence">
+                    <div class="advantages__row__box__content">
+                        <span id="img-transparency"></span>
+                        <h3 class="advantages__row__box__header">Business intelligence</h3>
+                        <p class="advantages__row__box__text_about">Track time and analyze your company's efficiency
+                            across projects, clients, departments, and employees.</p>
+                        <p class="advantages__row__box__text_learn">Learn more &rarr;</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="advantages__content">
+            <h3 class="support-headline-tag">MORE USE CASES</h3>
+            <ul class="advantages__content__cases">
+                <a href="#">
+                    <li>Time Clock</li>
+                </a>
+                <a href="#">
+                    <li>Work Hours Tracker</li>
+                </a>
+                <a href="#">
+                    <li>Employee Time Tracker</li>
+                </a>
+                <a href="#">
+                    <li>Attendance Tracker</li>
+                </a>
+                <a href="#">
+                    <li>Task Timer</li>
+                </a>
+                <a href="#">
+                    <li>Time Card Calculator</li>
+                </a>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- --------------------- Advantages Ends ----------------------------->
+    <div class="Free">
+        <div>
+            <img src="https://clockify.me/assets/images/free-forever-clock-4.svg" alt="Free Image">
+        </div>
+        <div>
+            <h2>Free</h2>
+            <span>Forever!</span>
+            <li><span>✓</span><span>Unlimited users</span></li>
+            <li><span>✓</span><span>Unlimited tracking</span></li>
+            <li><span>✓</span><span>Unlimited projects</span></li>
+            <p>Upgrades →</p>
+        </div>
+    </div>
+    <!-- ---------------------Free Ends ----------------------------->
+
+    <section class="support-section">
+        <span class="support-headline-tag">#1 SUPPORT IN SOFTWARE</span>
+        <h2 class="everywhere__header">World-class customer support</h2>
+        <p class="everywhere__text_about" style="max-width: 650px;">We're here 24 hours a day, every day of the week,
+            including holidays.</p>
+        <div class="support-features-flex">
+            <div class="support-features-flex-column">
+                <img class="support-features-img" src="/assets/images/support-phone.svg" alt="">
+                <div class="support-features-p">
+                    <span class="support-features-headline">24/7</span>
+                    <span class="support-features-explainer">support anytime, anywhere</span>
+                </div>
+            </div>
+            <div class="support-features-flex-column">
+                <img class="support-features-img" src="/assets/images/support-mail.svg" alt="">
+                <div class="support-features-p">
+                    <span class="support-features-headline">1h</span>
+                    <span class="support-features-explainer">average response time</span>
+                </div>
+            </div>
+            <div class="support-features-flex-column">
+                <img class="support-features-img" src="/assets/images/support-heart.svg" alt="">
+                <div class="support-features-p">
+                    <span class="support-features-headline">95%</span>
+                    <span class="support-features-explainer">satisfaction score (12k+ ratings)</span>
+                </div>
+            </div>
+            <div class="support-features-flex-column">
+                <img class="support-features-img" src="/assets/images/support-uptime.svg" alt="">
+                <div class="support-features-p">
+                    <span class="support-features-headline">99.99%</span>
+                    <span class="support-features-explainer">highest uptime levels</span>
+                </div>
+            </div>
+        </div>
+        <a href="#"><button class="support-button">Contact us</button></a>
+        <span class="support-headline-tag">EMAIL • PHONE • CHAT</span>
+    </section>
+
+    <!-- ---------------------Support Ends ----------------------------->
+
+    <div class="Testimonials">
+        <h6>#1 RATED SOFTWARE</h6>
+        <h1 class="Heading__Two">Join millions of happy users</h1>
+        <h2>Clockify is the best rated time tracking software with 4,000+ reviews.</h2>
+        <img src="https://clockify.me/assets/images/customer-feedback-logo-expanded-3.svg" alt="icon showcase">
+
+        <div class="Testimonials__cards">
+            <div class="Testimonials__cards__section">
+                <p>Best time tracking software!</p>
+                <p>★★★★★</p>
+                <p>I use Clockify for work, but it also lets me know exactly what I am doing in my day!</p>
+                <p>— Marc Wolfe, Marketing Manager</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Best timesheet software on the market</p>
+                <p>★★★★★</p>
+                <p>Easy to use. Quick to maneuver. Excellent reporting and administration.</p>
+                <p>— Anurag K, Database Engineer,</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Wonderful tool for tracking productivity</p>
+                <p>★★★★★</p>
+                <p>I enjoy it so much I use outside of work to track my own personal self-development.</p>
+                <p>— Jessup S, Operations Associate</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>I feel more productive!</p>
+                <p>★★★★★</p>
+                <p>It's really encouraging to look back and see how much I've accomplished!</p>
+                <p>— Kristen Eisentrager, Creative Coordinator</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Best time tracking software!</p>
+                <p>★★★★★</p>
+                <p>I use Clockify for work, but it also lets me know exactly what I am doing in my day!</p>
+                <p>— Marc Wolfe, Marketing Manager</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Best timesheet software on the market</p>
+                <p>★★★★★</p>
+                <p>Easy to use. Quick to maneuver. Excellent reporting and administration.</p>
+                <p>— Anurag K, Database Engineer,</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Wonderful tool for tracking productivity</p>
+                <p>★★★★★</p>
+                <p>I enjoy it so much I use outside of work to track my own personal self-development.</p>
+                <p>— Jessup S, Operations Associate</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>I feel more productive!</p>
+                <p>★★★★★</p>
+                <p>It's really encouraging to look back and see how much I've accomplished!</p>
+                <p>— Kristen Eisentrager, Creative Coordinator</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Best time tracking software!</p>
+                <p>★★★★★</p>
+                <p>I use Clockify for work, but it also lets me know exactly what I am doing in my day!</p>
+                <p>— Marc Wolfe, Marketing Manager</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Best timesheet software on the market</p>
+                <p>★★★★★</p>
+                <p>Easy to use. Quick to maneuver. Excellent reporting and administration.</p>
+                <p>— Anurag K, Database Engineer,</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Wonderful tool for tracking productivity</p>
+                <p>★★★★★</p>
+                <p>I enjoy it so much I use outside of work to track my own personal self-development.</p>
+                <p>— Jessup S, Operations Associate</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>I feel more productive!</p>
+                <p>★★★★★</p>
+                <p>It's really encouraging to look back and see how much I've accomplished!</p>
+                <p>— Kristen Eisentrager, Creative Coordinator</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Best time tracking software!</p>
+                <p>★★★★★</p>
+                <p>I use Clockify for work, but it also lets me know exactly what I am doing in my day!</p>
+                <p>— Marc Wolfe, Marketing Manager</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Best timesheet software on the market</p>
+                <p>★★★★★</p>
+                <p>Easy to use. Quick to maneuver. Excellent reporting and administration.</p>
+                <p>— Anurag K, Database Engineer,</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Wonderful tool for tracking productivity</p>
+                <p>★★★★★</p>
+                <p>I enjoy it so much I use outside of work to track my own personal self-development.</p>
+                <p>— Jessup S, Operations Associate</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>I feel more productive!</p>
+                <p>★★★★★</p>
+                <p>It's really encouraging to look back and see how much I've accomplished!</p>
+                <p>— Kristen Eisentrager, Creative Coordinator</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Best time tracking software!</p>
+                <p>★★★★★</p>
+                <p>I use Clockify for work, but it also lets me know exactly what I am doing in my day!</p>
+                <p>— Marc Wolfe, Marketing Manager</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Best timesheet software on the market</p>
+                <p>★★★★★</p>
+                <p>Easy to use. Quick to maneuver. Excellent reporting and administration.</p>
+                <p>— Anurag K, Database Engineer,</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Wonderful tool for tracking productivity</p>
+                <p>★★★★★</p>
+                <p>I enjoy it so much I use outside of work to track my own personal self-development.</p>
+                <p>— Jessup S, Operations Associate</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>I feel more productive!</p>
+                <p>★★★★★</p>
+                <p>It's really encouraging to look back and see how much I've accomplished!</p>
+                <p>— Kristen Eisentrager, Creative Coordinator</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Best time tracking software!</p>
+                <p>★★★★★</p>
+                <p>I use Clockify for work, but it also lets me know exactly what I am doing in my day!</p>
+                <p>— Marc Wolfe, Marketing Manager</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Best timesheet software on the market</p>
+                <p>★★★★★</p>
+                <p>Easy to use. Quick to maneuver. Excellent reporting and administration.</p>
+                <p>— Anurag K, Database Engineer,</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>Wonderful tool for tracking productivity</p>
+                <p>★★★★★</p>
+                <p>I enjoy it so much I use outside of work to track my own personal self-development.</p>
+                <p>— Jessup S, Operations Associate</p>
+            </div>
+            <div class="Testimonials__cards__section">
+                <p>I feel more productive!</p>
+                <p>★★★★★</p>
+                <p>It's really encouraging to look back and see how much I've accomplished!</p>
+                <p>— Kristen Eisentrager, Creative Coordinator</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- --------------------- Navigation End ----------------------------->
+    <div class="Footer">
+        <div>
+            <h1 class="Heading__Two">Start tracking time with Clockify</h1>
+            <div class="Footer__list">
+                <li>24/7 Support</li>
+                <li>•</li>
+                <li>Cancel Anytime</li>
+                <li>•</li>
+                <li>Free Forever</li>
+            </div>
+            <button onclick="parent.location='signup.html'" class="Dark__btn">CREATE FREE ACCOUNT</button>
+            <i class="fas fa-users"><span>147,195 people signed up last month</i>
+        </div>
+       
+  
+
+        <div id="footer"></div>
+        <script>
+            $(function () {
+                $("#footer").load("footer.html");
+            });
+        </script>
+
+<div id="chatbot"></div>
+<script>
+    $(function () {
+        $("#chatbot").load("chatbot.html");
+    });
+</script>
+</body>
+
+</html>
+
+
+
