@@ -28,7 +28,8 @@ p{
 
 #project-bar{
   background-color: white;
-  border: 2px solid rgb(48, 48, 48);
+  /* border: 2px solid rgb(48, 48, 48); */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   /* width: 100%; */
   /* height: 50px; */
   display: flex;
@@ -37,16 +38,23 @@ justify-content: space-evenly;
 
 }
 #createbtn{
-  background-color:  #03a9f4;
+  background-color:  #4a47ff;
+  cursor: pointer;
   color: white;
   height: 45px;
   margin-top: 30px;
-  margin-left: 80%;
+  margin-left: 81%;
   border: none;
-  font-size:15px
-
+  font-size:15px;
+  border-radius: 5px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
+#createbtn:hover{
+  transition: all .5s ease;
+  background-color:  #0501fa;
+}
 #apply_filter{
   background-color: white;
   color:  #03a9f4;
@@ -146,8 +154,10 @@ justify-content: space-evenly;
   background-color: white;
   height: 320px;
   width:500px;
-  border: 2px solid black;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border: 1px ridge blue;
+  border-radius: 7px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   padding-bottom: 50px;
   position: fixed;
   left: 30%;
@@ -165,23 +175,35 @@ text-align: center;
 #craetebtn{
   background-color: #03a9f4;
   color:  white;
-  border:1px solid  #03a9f4;
+  border:.5px solid  #03a9f4;
   height: 30px;
   margin-top: 20px;
   margin-left: 60px;
-  
+  border-radius: 5px;
+}
+
+#craetebtn:hover{
+  background-color: #034ff4;
 }
 
 #cancelbtn{
-color: #03a9f4;
-margin-left: 300px;
+background-color:transparent;
+/* margin-left: 300px; */
+border: .5px ridge #03a9f4;
 margin-top: 20px;
+border-radius: 5px;
+}
+
+#cancelbtn:hover{
+  background-color: #03a8f46e;
+ 
 }
 
 #alert_save{
   position: fixed;
   left: 30%;
   background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   width: 40%;
   padding-bottom: 30px;
   top: -120%;
@@ -226,29 +248,49 @@ padding:5px;
 text-transform: capitalize;
 border: 1px solid gray;
 margin: auto;
-width: 80%;
+width: 86pc;
 background-color: white;
 justify-content: space-between;
-
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
 
-.itemfunc{
+.itemfunc1{
   padding: 3px;
-  background-color:#03a9f4;
+  background-color: red;
   color: #fff;
   border-radius: 5px;
   height: 40px;
+  width: 80px;
+  height: 40px;
   margin-top: 10px;
+  border: 1px ridge red;
 }
-.itemfunc:hover , .itemfunc:focus{
-  background-color: black;
+.itemfunc1:hover , .itemfunc1:focus{
+  background-color:rgba(255, 0, 0, 0.678);
+  color:white;
+}
+
+.itemfunc2{
+  padding: 3px;
+  background-color: gray;
+  color: #fff;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px;
+  height: 40px;
+  margin-top: 10px;
+  border: 1px ridge gray;
+}
+.itemfunc2:hover , .itemfunc2:focus{
+  background-color:rgba(128, 128, 128, 0.678);
   color:white;
 }
 
 
 .project_details{
-  margin-top: 20%;
-  margin-left: -1350px;
-  width: 90%;
+  margin-top: 14%;
+  margin-left: -1530px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  width: 89%;
 }

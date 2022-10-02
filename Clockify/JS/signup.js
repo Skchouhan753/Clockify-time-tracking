@@ -15,7 +15,7 @@ function createAccount(){
     if(checkEmail(data.email)===true){
         userData.push(data)
         localStorage.setItem('signupData',JSON.stringify(userData));
-        
+        window.location.href = "login.html"
     }
     else{
         alert('Account already exist')

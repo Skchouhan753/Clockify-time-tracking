@@ -49,6 +49,8 @@ function append(data){
         check.setAttribute("type","checkbox")
         let h4=document.createElement("h4");
         h4.innerText=el.projectname;
+        h4.style.color = el.projectcolor;
+        h4.style.cursor = "pointer";
         let p=document.createElement("p");
         p.innerText=el.projectclient
         let p1=document.createElement("p");
@@ -57,12 +59,14 @@ function append(data){
         p2.innerText=el.projecttemplate
         let dele=document.createElement("i");
         dele.setAttribute("class","fa-solid fa-trash-arrow-up");
+        dele.style.cursor = "pointer";
         dele.addEventListener("click",function(){
             Delete(el,index);
         })  
          let btn1 = document.createElement('button')
          btn1.innerText = "Archieve"
-         btn1.className =  "itemfunc"
+         btn1.className =  "itemfunc1"
+         btn1.style.cursor = "pointer";
          btn1.addEventListener("click"  ,function(){
              if(true){
                 h4.style.textDecorationLine ="line-through"
@@ -72,7 +76,8 @@ function append(data){
          })   
          let btn2 = document.createElement('button')
          btn2.innerText = "Restore"
-         btn2.className =  "itemfunc"
+         btn2.className =  "itemfunc2"
+         btn2.style.cursor = "pointer";
          btn2.addEventListener("click"  ,function(){
              if(true){
                 h4.style.textDecorationLine ="none"
