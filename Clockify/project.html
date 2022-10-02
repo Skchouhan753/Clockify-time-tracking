@@ -9,19 +9,19 @@
   <link rel="stylesheet" href="./CSS/project.css">
   <title>Project page</title>
   <link rel="icon" type="image/x-icon" href="./images/faviconimg.jpg">
-  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="https://clockify.me/assets/images/favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/249783f98b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./CSS/navigation.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script> -->
-  <!-- <link rel="stylesheet" href="./CSS/navigation.css"> -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+   <link rel="stylesheet" href="./CSS/navigation.css">
 </head>
 
 <body>
-  <!-- <div class="product__navigation">
+   <div class="product__navigation">
     <div>
         <i onclick="sidebarFeature()" class="fas fa-bars"></i>
     </div>
@@ -65,8 +65,8 @@
         </div>
     </div>
     
- </div> -->
-<!-- <div class="product__container">
+ </div> 
+ <div class="product__container">
     <div id="product__container__sidebar" class="product__container__sidebar">
         <div  onclick="parent.location='timesheet.html'" title="Timesheet">
             <img src="https://clockify.me/assets/nav-icons/timesheet.svg" alt="icon">
@@ -114,7 +114,7 @@
             <img src="https://clockify.me/assets/nav-icons/settings.svg" alt="icon">
             <span>Settings</span>
         </div>
-    </div> -->
+    </div> 
     
   <div id="projectbox">
     <div id="newproject1">
@@ -211,7 +211,7 @@
 
       <div id="projectsearch">
         <img style="height:30px ;margin-top:12px" src="https://tse1.mm.bing.net/th?id=OIP.h6JKyBrhuKPEzjvJnIVY2wHaHa&pid=Api&P=0" alt="">
-        <input style="height: 25px;width:100%;margin-top: 10px;" type="text" placeholder="Project Name">
+        <input style="height: 25px;width:100%;margin-top: 12px;" type="text" placeholder="Project Name">
       </div>
       <button id="apply_filter" onclick="filter()">Apply Filter</button>
     </div>
@@ -222,21 +222,22 @@
 
   </div>
 
-
+<div class ="project_details">
   <div id="project_details">
   <div id="project2">Projects</div>
-  <div style="display: flex; justify-content: space-evenly;" id="pvalue">
+  <div style="display: flex; justify-content: space-between;" id="pvalue">
     <input type="checkbox">
-     <p>NAME  <i class="fa-solid fa-chevron-down"></i></p>
-     <p>CLIENT <i class="fa-solid fa-chevron-down"></i></p>
-     <P>TRACKED <i class="fa-solid fa-chevron-down"></i></P>
-     <P>AMOUNT <i class="fa-solid fa-chevron-down"></i></P>
-     <P>PROGRESS <i class="fa-solid fa-chevron-down"></i></P>
-     <P>ACCESS  <i class="fa-solid fa-chevron-down"></i></P>
+     <p>Name  <i class="fa-solid fa-chevron-down"></i></p>
+     <p>Clients <i class="fa-solid fa-chevron-down"></i></p>
+     <P>Type <i class="fa-solid fa-chevron-down"></i></P>
+     <P>Template <i class="fa-solid fa-chevron-down"></i></P>
+     <P>Delete <i class="fa-solid fa-chevron-down"></i></P>
+     <P>Archieve <i class="fa-solid fa-chevron-down"></i></P>
+     <P>Restore <i class="fa-solid fa-chevron-down"></i></P>
   </div>
   <div id="project_saved" ></div>
   </div>
-
+</div>
 
   
 
@@ -286,7 +287,7 @@
 </div>
 
 
-<!-- </div> -->
+ </div> 
   
 </body>
 
