@@ -685,15 +685,30 @@
             });
         </script>
 
-<div id="chatbot"></div>
+<!-- <div id="chatbot"></div>
 <script>
     $(function () {
-        $("#chatbot").load("chatbot.html");
+        $("#chatbot").load("live_chat.html");
     });
-</script>
-</body>
+</script> -->
 
+
+<div id="chat">
+    <script type="module">
+        import chat from './JS/one.js'
+        document.getElementById("chat").innerHTML=chat;
+    </script>
+</div>
+
+<script src="./JS/chatbot.js"></script>
+<!-- <script src="./JS/app.js"></script> -->
+<!-- <script src="./JS/response.js"></script> -->
+<!-- <script src="./JS/chatbotservice.js"></script> -->
+<link rel="stylesheet" href="./CSS/chatbot.css">
+</body>
+<script src=""></script>
 </html>
+
 
 
 
