@@ -14,9 +14,9 @@ This was a collaborative project made by 5 members Executed in 5 days.
 ---
 
 ## Tech Stack Used : -
-  - `React`
-  - `CSS`
-    `JavaScript`
+  `React`
+  `CSS`
+  `JavaScript`
   
   ### Following are the Screenshots for the reference
 
